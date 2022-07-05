@@ -2,11 +2,13 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import logoImage from "./assets/logo.svg";
 
+import { levels, calculateImc } from "./helpers/imc";
+
 const App = () => {
   const [heightField, setHightField] = useState<number>(0);
   const [weightField, setWeightField] = useState<number>(0);
 
-  const calculateImc = () => {
+  const handleCalculateImc = () => {
     if (heightField && weightField) {
     } else {
       alert("Digite os campos corretamente!");
@@ -41,7 +43,7 @@ const App = () => {
             value={weightField > 0 ? weightField : ""}
             onChange={(e) => setWeightField(parseFloat(e.target.value))}
           />
-          <button onClick={calculateImc}>Calcular IMC</button>
+          <button onClick={handleCalculateImc}>Calcular IMC</button>
         </div>
         <div className={styles.rightSide}>321</div>
       </div>
