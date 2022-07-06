@@ -1,6 +1,5 @@
 import { useState } from "react";
 import * as C from "./AppStyle";
-import styles from "./App.module.css";
 import logoImage from "./assets/logo.svg";
 import { GridItem } from "./components/GridItem";
 

@@ -1,5 +1,5 @@
 import { Level } from "../../helpers/imc";
-import style from "./GridItem.module.css";
+import * as C from "./GridItemStyles";
 
 type Props = {
   data: Level;
