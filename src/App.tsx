@@ -49,7 +49,7 @@ const App = () => {
         <C.rightSide>
           <div className="grid">
             {levels.map((item, index) => (
-              <GridItem key={index} data={item} />
+              <GridItem key={index} item={item} />
             ))}
           </div>
         </C.rightSide>
