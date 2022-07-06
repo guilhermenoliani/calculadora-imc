@@ -1,4 +1,5 @@
 import { useState } from "react";
+import * as C from "./AppStyle";
 import styles from "./App.module.css";
 import logoImage from "./assets/logo.svg";
 import { GridItem } from "./components/GridItem";
@@ -17,14 +18,14 @@ const App = () => {
   };
 
   return (
-    <div className={styles.main}>
+    <div className="main">
       <header>
-        <div className={styles.headerContainer}>
+        <C.headerContainer>
           <img src={logoImage} alt="" />
-        </div>
+        </C.headerContainer>
       </header>
-      <div className={styles.container}>
-        <div className={styles.leftSide}>
+      <C.container>
+        <C.leftSide>
           <h1>Calcule o seu IMC.</h1>
           <p>
             IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela
@@ -45,15 +46,15 @@ const App = () => {
             onChange={(e) => setWeightField(parseFloat(e.target.value))}
           />
           <button onClick={handleCalculateImc}>Calcular IMC</button>
-        </div>
-        <div className={styles.rightSide}>
-          <div className={styles.grid}>
+        </C.leftSide>
+        <C.rightSide>
+          <div className="grid">
             {levels.map((item, index) => (
               <GridItem key={index} data={item} />
             ))}
           </div>
-        </div>
-      </div>
+        </C.rightSide>
+      </C.container>
     </div>
   );
 };
