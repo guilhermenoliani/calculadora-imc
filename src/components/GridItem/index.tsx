@@ -15,6 +15,10 @@ export const GridItem = ({ item }: Props) => {
         {item.icon === "down" && <img src={thumbDown} alt="" width="50" />}
       </C.gridIcon>
       <C.gridTitle>{item.title}</C.gridTitle>
+
+      {item.yourImc && (
+        <div className="yourImc">Seu IMC é de {item.yourImc} kg/m²</div>
+      )}
       <C.gridInfo>
         <>
           IMC está entre <strong>{item.imc[0]}</strong> e{" "}

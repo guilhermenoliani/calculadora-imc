@@ -9,6 +9,12 @@ export const Main = styled.div`
   color: #fff;
   border-radius: 10px;
   padding: 20px;
+
+  .yourImc {
+    text-align: center;
+    font-size: 17px;
+    margin: 10px 0 50px 0;
+  }
 `;
 
 export const gridIcon = styled.div`
