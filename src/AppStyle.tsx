@@ -68,4 +68,9 @@ export const rightSide = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .rightBig {
+    display: flex;
+    flex: 1;
+  }
 `;

@@ -3,14 +3,16 @@ import * as C from "./AppStyle";
 import logoImage from "./assets/logo.svg";
 import { GridItem } from "./components/GridItem";
 
-import { levels, calculateImc } from "./helpers/imc";
+import { levels, calculateImc, Level } from "./helpers/imc";
 
 const App = () => {
   const [heightField, setHightField] = useState<number>(0);
   const [weightField, setWeightField] = useState<number>(0);
+  const [toShow, setToShow] = useState<Level | null>(null);
 
   const handleCalculateImc = () => {
     if (heightField && weightField) {
+      setToShow(calculateImc(heightField, weightField));
     } else {
       alert("Digite os campos corretamente!");
     }
@@ -47,11 +49,19 @@ const App = () => {
           <button onClick={handleCalculateImc}>Calcular IMC</button>
         </C.leftSide>
         <C.rightSide>
-          <div className="grid">
-            {levels.map((item, index) => (
-              <GridItem key={index} item={item} />
-            ))}
-          </div>
+          {!toShow && (
+            <div className="grid">
+              {levels.map((item, index) => (
+                <GridItem key={index} item={item} />
+              ))}
+            </div>
+          )}
+          {toShow && (
+            <div className="rightBig">
+              <div className="rightArrow"></div>
+              <GridItem item={toShow} />
+            </div>
+          )}
         </C.rightSide>
       </C.container>
     </div>
