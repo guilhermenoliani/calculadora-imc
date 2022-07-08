@@ -1,4 +1,4 @@
-![Logo](./assets/images/logo_readme.png)
+![Logo](./src/assets/logo_readme.png)
 
 ## Instalando projeto
 
