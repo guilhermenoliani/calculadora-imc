@@ -26,7 +26,7 @@ const App = () => {
   };
 
   return (
-    <div className="main">
+    <>
       <header>
         <C.headerContainer>
           <img src={logoImage} alt="Logo Guilherme Oliani" />
@@ -81,7 +81,7 @@ const App = () => {
           )}
         </C.rightSide>
       </C.container>
-    </div>
+    </>
   );
 };
 export default App;
