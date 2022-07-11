@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as C from "./AppStyle";
 import logoImage from "./assets/logo.svg";
+import arrowLeft from "./assets/arrow_left.svg";
 import { GridItem } from "./components/GridItem";
 
 import { levels, calculateImc, Level } from "./helpers/imc";
@@ -18,11 +19,17 @@ const App = () => {
     }
   };
 
+  const handleBackButton = () => {
+    setToShow(null);
+    setHightField(0);
+    setWeightField(0);
+  };
+
   return (
     <div className="main">
       <header>
         <C.headerContainer>
-          <img src={logoImage} alt="" />
+          <img src={logoImage} alt="Logo Guilherme Oliani" />
         </C.headerContainer>
       </header>
       <C.container>
@@ -58,7 +65,13 @@ const App = () => {
           )}
           {toShow && (
             <div className="rightBig">
-              <div className="rightArrow"></div>
+              <div
+                className="rightArrow"
+                onClick={handleBackButton}
+                title="Voltar"
+              >
+                <img src={arrowLeft} alt="Botão para reiniciar calculadora" />
+              </div>
               <GridItem item={toShow} />
             </div>
           )}
