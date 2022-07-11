@@ -72,5 +72,24 @@ export const rightSide = styled.div`
   .rightBig {
     display: flex;
     flex: 1;
+
+    .rightArrow {
+      position: absolute;
+      background-color: #227c9d;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-itens: center;
+      cursor: pointer;
+      margin-left: -22px;
+      margin-top: 160px;
+      transition: all ease 0.3s;
+
+      & :hover {
+        opacity: 0.7;
+      }
+    }
   }
 `;
