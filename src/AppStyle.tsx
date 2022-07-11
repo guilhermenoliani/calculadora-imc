@@ -87,6 +87,10 @@ export const rightSide = styled.div`
       margin-top: 160px;
       transition: all ease 0.3s;
 
+      img {
+        width: 40px;
+      }
+
       & :hover {
         opacity: 0.7;
       }
