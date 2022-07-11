@@ -34,8 +34,11 @@ export const leftSide = styled.div`
     font-size: 14px;
     outline: 0;
 
-    &:focus {
+    & :focus {
       border-bottom: 2px solid #2dc9d3;
+    }
+    &:disabled {
+      opacity: 0.5;
     }
   }
 
@@ -53,6 +56,10 @@ export const leftSide = styled.div`
 
     &:hover {
       opacity: 0.7;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 `;
